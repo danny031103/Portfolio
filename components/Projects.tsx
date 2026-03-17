@@ -19,8 +19,8 @@ const projects = [
   {
     name: 'NYU Bus App',
     description:
-      'iOS app giving NYU students accurate real-time shuttle bus arrival and departure information in a clean, readable interface.',
-    tags: ['Swift', 'iOS', 'REST APIs'],
+      'Web app giving NYU students accurate real-time shuttle bus arrival and departure information in a clean, readable interface.',
+    tags: ['Python', 'HTML', 'CSS', 'REST APIs'],
     github: 'https://github.com/danny031103/NYU_Bus_WebApp',
     live: 'https://nyu-bus-web-app.vercel.app/',
   },
