@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const links = [
   { href: '#about', label: 'About' },
@@ -28,11 +29,8 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-white font-bold text-xl tracking-tight hover:text-[#3b82f6] transition-colors duration-200"
-        >
-          DB
+        <a href="#" className="block w-9 h-9 rounded-full overflow-hidden border border-[#1f1f1f] hover:border-[#3b82f6] transition-colors duration-200">
+          <Image src="/profpic.jpg" alt="Daniel Brito" width={36} height={36} className="object-cover w-full h-full" />
         </a>
 
         {/* Desktop */}
