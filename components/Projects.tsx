@@ -32,6 +32,13 @@ const projects = [
     github: 'https://github.com/danny031103/Reef-Params-Tracker',
   },
   {
+    name: 'Wishlist Bot',
+    description:
+      'Captures items to a personal wishlist on Google Drive via MCP or iOS shortcut — letting you log things you encounter on the go before you forget them.',
+    tags: ['JavaScript', 'MCP', 'Google Drive API', 'iOS Shortcuts', 'Automation'],
+    github: 'https://github.com/danny031103/Wishlist_Bot',
+  },
+  {
     name: "Let's Talk Aquariums",
     description:
       'Community platform for aquarists with an integrated AI chatbot and live chat rooms where users are matched with other hobbyists for real-time advice and feedback on their tanks.',
