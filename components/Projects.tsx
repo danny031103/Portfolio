@@ -31,11 +31,12 @@ const projects = [
     github: 'https://github.com/danny031103/Reef-Params-Tracker',
   },
   {
-    name: 'ML Model Checking',
+    name: "Let's Talk Aquariums",
     description:
-      'Python-based tooling to validate post-graduate research on recursive integer program verification, applying formal verification methods to ML systems.',
-    tags: ['Python', 'Machine Learning', 'Formal Verification'],
-    github: 'https://github.com/danny031103/Machine-Learning-Model-Checking',
+      'Community platform for aquarists with an integrated AI chatbot and live chat rooms where users are matched with other hobbyists for real-time advice and feedback on their tanks.',
+    tags: ['JavaScript', 'Chatbot', 'Real-time', 'Community'],
+    github: 'https://github.com/danny031103/Let-s-Talk-Aquariums',
+    live: 'https://let-s-talk-aquariums.vercel.app/',
   },
 ]
 
@@ -113,15 +114,30 @@ export default function Projects() {
                     d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
                   />
                 </svg>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#a3a3a3] hover:text-white transition-colors duration-200"
-                  aria-label={`GitHub — ${project.name}`}
-                >
-                  <GitHubIcon />
-                </a>
+                <div className="flex items-center gap-3">
+                  {'live' in project && (
+                    <a
+                      href={(project as typeof project & { live: string }).live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#a3a3a3] hover:text-white transition-colors duration-200"
+                      aria-label={`Live demo — ${project.name}`}
+                    >
+                      <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                    </a>
+                  )}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#a3a3a3] hover:text-white transition-colors duration-200"
+                    aria-label={`GitHub — ${project.name}`}
+                  >
+                    <GitHubIcon />
+                  </a>
+                </div>
               </div>
               <h3 className="text-white font-semibold text-base mb-2 group-hover:text-[#3b82f6] transition-colors duration-200">
                 {project.name}
