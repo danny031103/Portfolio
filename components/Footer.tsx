@@ -18,6 +18,14 @@ export default function Footer() {
             className="text-[#a3a3a3] hover:text-white text-xs font-mono transition-colors duration-200">
             Instagram
           </a>
+          <a href="https://www.instagram.com/britosreef" target="_blank" rel="noopener noreferrer"
+            className="text-[#a3a3a3] hover:text-white text-xs font-mono transition-colors duration-200">
+            Reef Instagram
+          </a>
+          <a href="https://www.reef2reef.com/search/6537825/?c[users]=danielbrito0311&o=date" target="_blank" rel="noopener noreferrer"
+            className="text-[#a3a3a3] hover:text-white text-xs font-mono transition-colors duration-200">
+            Reef2Reef
+          </a>
           <a href="mailto:db4471@nyu.edu"
             className="text-[#a3a3a3] hover:text-white text-xs font-mono transition-colors duration-200">
             Email
