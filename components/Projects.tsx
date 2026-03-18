@@ -5,6 +5,7 @@ const featured = {
   status: 'In Development',
   tags: ['Python', 'Computer Vision', 'Machine Learning', 'TypeScript', 'Mobile', 'Cloud'],
   github: 'https://github.com/danny031103',
+  live: 'https://visionaquatics.vercel.app/',
   role: 'Founder & Software Engineer',
 }
 
@@ -48,6 +49,14 @@ const projects = [
   },
 ]
 
+function ExternalLinkIcon({ className }: { className?: string }) {
+  return (
+    <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className={className}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6m0 0v6m0-6L10 14" />
+    </svg>
+  )
+}
+
 function GitHubIcon({ className }: { className?: string }) {
   return (
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" className={className}>
@@ -88,15 +97,28 @@ export default function Projects() {
               </span>
             ))}
           </div>
-          <a
-            href={featured.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-[#3b82f6] hover:text-white transition-colors duration-200"
-          >
-            <GitHubIcon />
-            View on GitHub
-          </a>
+          <div className="flex items-center gap-5">
+            <a
+              href={featured.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-[#3b82f6] hover:text-white transition-colors duration-200"
+            >
+              <GitHubIcon />
+              View on GitHub
+            </a>
+            {featured.live && (
+              <a
+                href={featured.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-[#3b82f6] hover:text-white transition-colors duration-200"
+              >
+                <ExternalLinkIcon />
+                Check it Out
+              </a>
+            )}
+          </div>
         </div>
 
         {/* Project grid */}
